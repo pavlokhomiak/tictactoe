@@ -29,7 +29,6 @@ public class View {
         for (int i = 0; i < cells.size(); i++) {
             for (int j = 0; j < logic.getAI().size(); j++) {
                 if (cells.get(i).equals(logic.getAI().get(j))) {
-                    //cells.set(i, X);
                     cellsValue[i] = X;
                 }
             }
@@ -44,10 +43,6 @@ public class View {
         System.out.printf("A   %s   %s   %s%n", cellsValue[0], cellsValue[1], cellsValue[2]);
         System.out.printf("B   %s   %s   %s%n", cellsValue[3], cellsValue[4], cellsValue[5]);
         System.out.printf("B   %s   %s   %s%n", cellsValue[6], cellsValue[7], cellsValue[8]);
-
-    }
-
-    void box() {
 
     }
 }

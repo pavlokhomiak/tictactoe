@@ -1,3 +1,5 @@
 .idea/*
 *.iml
 target/*
+.src/main/java/first/*
+.src/main/java/large/*
