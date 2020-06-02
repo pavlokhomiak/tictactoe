@@ -14,7 +14,7 @@ public class GameLogic {
         while (true) {
             field.viewField();
             if (checkTie()) {
-                field.noWinners();
+                noWinners();
                 break;
             }
             if (playersTurn) {
@@ -28,10 +28,10 @@ public class GameLogic {
                 playersTurn = true;
             }
             if (checkWin(CellsValues.X.toString()).equals("player")) {
-                field.playerWins();
+                playerWins();
                 break;
             } else if (checkWin(CellsValues.O.toString()).equals("AI")) {
-                field.AIWins();
+                AIWins();
                 break;
             }
         }
@@ -84,26 +84,6 @@ public class GameLogic {
         field.setCell(CellsValues.O.toString(), randomCell);
     }
 
-    /*
-    private void updateFieldState() {
-        for (int i = 0; i < field.getCells().length; i++) {
-            for (int j = 0; j < AI.size(); j++) {
-                if (field.getCells().get(i).equals(AI.get(j))) {
-                    field.getCellsValue()[i] = field.getX();
-                }
-            }
-            for (int j = 0; j < player.size(); j++) {
-                if (field.getCells().get(i).equals(player.get(j))) {
-                    field.getCellsValue()[i] = field.getO();
-                }
-            }
-        }
-    }
-
-     */
-
-
-
     private String input() {
         String input = "";
         try {
@@ -118,6 +98,18 @@ public class GameLogic {
     private boolean checkTie() {
         return !Arrays.asList(field.getCells()).stream()
                 .anyMatch(x -> x.matches("[0-8]"));
+    }
+
+    public void playerWins() {
+        System.out.println("=== PLAYER WINS!!! ===");
+    }
+
+    public void AIWins() {
+        System.out.println("=== AI WINS!!! ===");
+    }
+
+    public void noWinners() {
+        System.out.println("Game over! No winners!");
     }
 
 }

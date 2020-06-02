@@ -32,8 +32,6 @@ public class Field {
         cells[index] = cell;
     }
 
-
-
     void viewField() {
         System.out.println(" ___________");
         System.out.println("|           |");
@@ -43,23 +41,11 @@ public class Field {
         System.out.println("|___________|");
     }
 
-    public void noWinners() {
-        System.out.println("Game over! No winners!");
-    }
-
     public void playersTurn() {
         System.out.println("Your turn!");
     }
 
     public void incorrect() {
         System.out.println("Incorrect input");
-    }
-
-    public void playerWins() {
-        System.out.println("=== PLAYER WINS!!! ===");
-    }
-
-    public void AIWins() {
-        System.out.println("=== AI WINS!!! ===");
     }
 }
